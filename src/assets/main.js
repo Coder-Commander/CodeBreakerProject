@@ -10,7 +10,7 @@ function guess() {
     let result = validateInput(input.value);
     if(result === false)
       return false;
-    else {
+    else if(result === true) {
        attempt += 1;
     }
 }
