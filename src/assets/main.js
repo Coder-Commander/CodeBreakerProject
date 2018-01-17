@@ -11,7 +11,7 @@ function guess() {
     if(result === false)
       return false;
     else if(result === true) {
-       attempt += 1;
+       attempt.value += 1;
     }
 }
 //implement new functions here
