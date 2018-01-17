@@ -55,7 +55,7 @@ function getResults(input) {
       initDiv += "<span class='glyphicon glyphicon-ok'></span>";
       counter += 1;
     }
-    else if(answer.value.indexOf(input[i]) > 0) {
+    else if(answer.value.indexOf(input[i]) > -1) {
       initDiv += "<span class='glyphicon glyphicon-transfer'></span>";
     }
     else {
