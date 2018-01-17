@@ -44,10 +44,12 @@ function validateInput(input) {
 function getResults(input) {
 
   let initDiv = '<div class="row"><span class="col-md-6">' + input.toString() + '</span><div class="col-md-6">';
+  let counter = 0;
   for(var i=0; i< input.length; i++)
   {
     if(input[i] === answer.value[i]) {
       initDiv += "<span class='glyphicon glyphicon-ok'></span>";
+      counter += 1;
     }
     else if(answer.value.indexOf(input[i]) > 0) {
       initDiv += "<span class='glyphicon glyphicon-transfer'></span>";
@@ -60,4 +62,13 @@ function getResults(input) {
   initDiv += "</div></div>"
 
   results.innerHTML = initDiv;
+
+  if(counter === 4)
+  {
+    return true;
+  }
+
+  else{
+    return false;
+  }
 }
