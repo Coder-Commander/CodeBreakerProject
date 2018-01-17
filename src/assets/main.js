@@ -40,3 +40,24 @@ function validateInput(input) {
     return false;
   }
 }
+
+function getResults(input) {
+
+  let initDiv = '<div class="row"><span class="col-md-6">' + input.toString() + '</span><div class="col-md-6">';
+  for(var i=0; i< input.length; i++)
+  {
+    if(input[i] === answer.value[i]) {
+      initDiv += "<span class='glyphicon glyphicon-ok'></span>";
+    }
+    else if(answer.value.indexOf(input[i]) > 0) {
+      initDiv += "<span class='glyphicon glyphicon-transfer'></span>";
+    }
+    else {
+      initDiv += "span class='glyphicon glyphicon-remove'></span>";
+    }
+
+  }
+  initDiv += "</div></div>"
+
+  results.innerHTML = initDiv;
+}
