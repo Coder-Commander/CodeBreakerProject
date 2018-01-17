@@ -14,7 +14,7 @@ function guess() {
        attempt.value += 1;
     }
 
-    if( getResults(input) === true){
+    if( getResults(input.value) === true){
       setMessage("You Win! :)");
     };
 }
