@@ -13,6 +13,10 @@ function guess() {
     else if(result === true) {
        attempt.value += 1;
     }
+
+    if( getResults(input) === true){
+      setMessage("You Win! :)");
+    };
 }
 //implement new functions here
 
